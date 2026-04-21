@@ -1,0 +1,8 @@
+{
+    "project_name": "ALS_RNAseq",
+    "__Project_Slug": "{{ cookiecutter.project_name.replace(' ', '_').replace('-', '_').replace('/', '_') }}",
+    "description": "Write the goal/purpose of this project here",
+    "author_name": "Your Name",
+    "email": "example@example.com",
+    "date": "Jan 26, 1959"
+}
