@@ -1,3 +1,8 @@
+<h1 align="center">
+<img src=https://github.com/Hideyuki-Okano-Lab/QookingFever/blob/main/logo/logo.png?raw=true width="500">
+</h1><br>
+
+
 # QookingFever
 Pipeline for converting FastQ files into count matrix
 
@@ -6,7 +11,7 @@ Pipeline for converting FastQ files into count matrix
 ```
 cookiecutter git@github.com:Hideyuki-Okano-Lab/QookingFever.git
 ```
-2. work in progress... 
+2. work in progress...
 
 ---
 ## For developpers
