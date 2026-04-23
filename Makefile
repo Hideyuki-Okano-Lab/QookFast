@@ -2,4 +2,4 @@
 
 test:
 	poetry run pytest -s tests/*
-	rm -fr .pytest_cache
+	rm -fr .pytest_cache .ruff_cache
