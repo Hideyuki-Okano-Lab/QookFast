@@ -2,12 +2,9 @@
 <img src=https://github.com/Hideyuki-Okano-Lab/QookFast/blob/main/logo/logo.png?raw=true width="400">
 </h1><br>
 
-# QookFast
-Pipeline for converting FastQ files into count matrix
+# QookFast: The "Bento" Pipeline for converting FastQ files into a count matrix.
 
-:warning: **Work in Progress**: This tool is currently under active development and is not yet guaranteed to be fully functional. We will notify all stakeholders once it is ready!
-
-:warning: **Note**: Currently, this tool is specifically designed to run on the shared desktop in Room 3C. Other environments are not supported at this time.
+Got raw FastQ files but dreading the pipeline setup? I feel you. And the headache doesn't stop there—modern science demands your entire environment to be 100% reproducible. But here’s your ultimate hack: grab this preset template and spin up a fully automated, containerized RNA-seq pipeline. Absolute reproducibility, perfectly packed into one box, and ready to serve in just a few keystrokes. Launch your project with this one-liner pipeline, the data will be ready to go! Enjoy "qooking" biology!
 
 ## Prerequisites
 Before you begin, ensure you have the following installed on your system (Note: These are already configured on the Room 3C shared desktop):
@@ -37,11 +34,6 @@ pip install cookiecutter jinja2-time
 ```bash
 cookiecutter git@github.com:Hideyuki-Okano-Lab/QookFast.git
 ```
->:bulb: Tip: Alternatively, on the shared desktop in Room 3C at KRM, you can run the following commands inside WSL:
->```bash
->cd ~/develop
->make countmatrix
->```
 
 2. Answer the prompts to configure project details
     - `project_name`: name of the project
