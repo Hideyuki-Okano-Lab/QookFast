@@ -39,7 +39,7 @@ From: ubuntu:22.04
 
 %help
     {{cookiecutter.project_name}} Container Engine
-    {{"-" for v in cookiecutter.project_name}}-----------------
+    {{"-" * cookiecutter.project_name|length}}-----------------
     This container encapsulates all necessary tools for the QookFast pipeline in {{cookiecutter.project_name}}.
     Usage:
         apptainer exec {{cookiecutter.__Project_Slug.lower()}}.sif [command]
