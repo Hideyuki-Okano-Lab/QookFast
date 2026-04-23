@@ -30,7 +30,7 @@ Now you have a directory like this:
     │   └── (count matrix will be generated here)
     ├── genome/
     │   ├── star_index/
-    │   │   └── (STAR index is automatically generated here)
+    │   │   └── (STAR index files will be automatically generated here)
     │   └── (reference genome files are automatically downloaded here)
     ├── qc/
     │   └── (fastp outputs will be generated here)
