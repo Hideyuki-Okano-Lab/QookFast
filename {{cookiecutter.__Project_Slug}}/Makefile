@@ -1,4 +1,4 @@
-.PHONY setup download_genome run
+.PHONY: setup download_genome run
 
 setup:
 	@sudo apt update && sudo apt upgrade -y
@@ -14,11 +14,11 @@ download_genome:
 	wget -P genome https://ftp.ensembl.org/pub/release-112/gtf/{{cookiecutter.species.lower()}}/{{cookiecutter.species}}.{{cookiecutter.__ref}}.112.gtf.gz
 	pigz -d genome/*.gz
 	STAR --runMode genomeGenerate \
-		 --runThreadN {{cookiecutter.threads}} \
-		 --genomeDir genome/star_index \
-		 --genomeFastaFiles genome/{{cookiecutter.species}}.{{cookiecutter.__ref}}.dna.primary_assembly.fa \
-		 --sjdbGTFfile genome/{{cookiecutter.species}}.{{cookiecutter.__ref}}.112.gtf \
-		 --sjdbOverhang $$(({{cookiecutter.read_length}} - 1))
+		--runThreadN {{cookiecutter.threads}} \
+		--genomeDir genome/star_index \
+		--genomeFastaFiles genome/{{cookiecutter.species}}.{{cookiecutter.__ref}}.dna.primary_assembly.fa \
+		--sjdbGTFfile genome/{{cookiecutter.species}}.{{cookiecutter.__ref}}.112.gtf \
+		--sjdbOverhang $$(({{cookiecutter.read_length}} - 1))
 
 
 run:
