@@ -10,6 +10,6 @@
     "__ref": "{{ 'GRCh38' if cookiecutter.species == 'Homo_sapiens' else 'GRCm39' }}",
     "read_length": 150,
     "read_type": ["single_end", "pair_end"],
-    "threads": 8,
+    "threads": 4,
     "strand": ["unstranded", "stranded", "rev-stranded"]
 }

@@ -51,7 +51,7 @@ cookiecutter git@github.com:Hideyuki-Okano-Lab/QookFast.git
     - `species`: choose from `Homo_sapiens` or `Mus_musculus`
     - `read_length`: read length (default: `150`)
     - `read_type`: choose from `single_end` or `pair_end`
-    - `threads`: thread numbers (default: `8`)
+    - `threads`: thread numbers (default: `4`)
     - `strand`: choose from `unstranded`, `stranded`, or `rev-stranded`
 
 :warning: **Important**: Please ensure you provide an accurate `project_name`, `author_name`, and `email`. This information is crucial for administrative purposes, such as contacting you for permission to clean up old projects when the shared desktop storage becomes full.
