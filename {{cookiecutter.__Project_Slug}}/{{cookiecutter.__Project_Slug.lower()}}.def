@@ -26,7 +26,7 @@ From: ubuntu:22.04
         ca-certificates \
         jq
 
-    wget -qO /usr/local/bin/fastp wget -qO /usr/local/bin/fastp http://opengene.org/fastp/fastp
+    wget -qO /usr/local/bin/fastp http://opengene.org/fastp/fastp
     chmod +x /usr/local/bin/fastp
 
     cd /tmp
