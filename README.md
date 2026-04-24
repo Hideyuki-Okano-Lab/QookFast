@@ -2,7 +2,7 @@
 <img src=https://github.com/yo-aka-gene/QookFast/blob/main/logo/logo.png?raw=true width="400">
 </h1><br>
 
-![QookFast Version](https://img.shields.io/github/v/tag/yo-aka-gene/QookFast?label=BasalCell&color=blue)
+![QookFast Version](https://img.shields.io/github/v/tag/yo-aka-gene/QookFast?label=QookFast&color=blue)
 
 
 # QookFast: The "Bento" Pipeline for converting FastQ files into a count matrix.
