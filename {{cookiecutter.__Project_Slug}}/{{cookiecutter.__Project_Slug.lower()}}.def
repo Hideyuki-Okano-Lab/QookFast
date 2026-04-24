@@ -23,8 +23,24 @@ From: ubuntu:22.04
         unzip \
         pigz \
         samtools \
-        ca-certificates
+        ca-certificates \
+        jq
 
+    wget -qO /usr/local/bin/fastp https://github.com/OpenGene/fastp/releases/latest/download/fastp
+    chmod +x /usr/local/bin/fastp
+
+    cd /tmp
+    STAR_URL=$(curl -sL https://api.github.com/repos/alexdobin/STAR/releases/latest | jq -r '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
+    wget -qO star_latest.zip "$STAR_URL"
+    unzip -q star_latest.zip
+    find . -type f -name "STAR" -path "*/Linux_x86_64_static/*" -exec cp {} /usr/local/bin/ \;
+
+    wget -qO subread_latest.tar.gz "https://sourceforge.net/projects/subread/files/latest/download"
+    mkdir subread_extracted
+    tar xzf subread_latest.tar.gz -C subread_extracted --strip-components=1
+    cp subread_extracted/bin/featureCounts /usr/local/bin/
+
+    rm -rf /tmp/*
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 
@@ -36,6 +52,9 @@ From: ubuntu:22.04
     samtools --version | head -n 1
     pigz --version
     wget --version | head -n 1
+    fastp --version 2>&1
+    STAR --version
+    featureCounts -v 2>&1 | grep "featureCounts"
 
 %help
     {{cookiecutter.project_name}} Container Engine
